@@ -5,6 +5,9 @@ services:
     build: ./jmeter-master
     container_name: master
     tty: true
+    volumes:
+      - ./jmeter-scripts:/jmeter/jmeter-scripts
+      - ./jmeter-results:/jmeter/jmeter-results
     networks:
       - jmeter-network
   slave:
